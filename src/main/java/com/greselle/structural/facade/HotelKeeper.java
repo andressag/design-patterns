@@ -1,0 +1,16 @@
+package com.greselle.structural.facade;
+
+// facade
+public class HotelKeeper {
+    public VegMenu getVegMenu() {
+        VegRestaurant vegRestaurant = new VegRestaurant();
+        VegMenu vegMenu = (VegMenu)vegRestaurant.getMenus();
+        return vegMenu;
+    }
+
+    public NonVegMenu getNonVegMenu() {
+        NonVegRestaurant nonVegRestaurant = new NonVegRestaurant();
+        NonVegMenu nonVegMenu = (NonVegMenu)nonVegRestaurant.getMenus();
+        return nonVegMenu;
+    }
+}
